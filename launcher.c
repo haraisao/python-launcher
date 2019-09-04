@@ -303,8 +303,9 @@ int run(int argc, char **argv, int is_gui) {
             strcat(scriptz, ".pyz");
             scriptf = open(scriptz, O_RDONLY);
             if (scriptf == -1) {
-                return fail("Cannot open %s\n", script);
+                return fail("Cannot open %s, %s\n", script, scriptz);
             }
+            strcpy(script, scriptz);
         }
     }
     end = python + read(scriptf, python, sizeof(python));
