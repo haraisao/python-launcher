@@ -89,15 +89,6 @@ char *quoted(char *data) {
     return result;
 }
 
-
-
-
-
-
-
-
-
-
 char *loadable_exe(char *exename) {
     /* HINSTANCE hPython;  DLL handle for python executable */
     char *result;
